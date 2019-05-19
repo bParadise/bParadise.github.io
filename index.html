@@ -130,6 +130,17 @@
 
 
 
+  <script async src="//www.googletagmanager.com/gtag/js?id=UA-140487849-1"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-140487849-1');
+    }
+  </script>
+
 
 
   <script>
@@ -485,7 +496,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-19 01:26:30" itemprop="dateModified" datetime="2019-05-19T01:26:30+08:00">2019-05-19</time>
+                <time title="Modified: 2019-05-19 20:47:57" itemprop="dateModified" datetime="2019-05-19T20:47:57+08:00">2019-05-19</time>
               
             
           </span>
@@ -527,7 +538,7 @@
 <li>部署位置：Github Pages</li>
 <li>Node.JS包管理器：YARN <a href="https://yarnpkg.com/zh-Hans/docs" target="_blank" rel="noopener">官方文档</a>、<a href="https://yarnpkg.com/zh-Hans/docs/migrating-from-npm" target="_blank" rel="noopener">从npm迁移</a></li>
 </ol>
-<h1 id="·-PROCESS-·"><a href="#·-PROCESS-·" class="headerlink" title="· PROCESS ·"></a>· PROCESS ·</h1><h2 id="本地环境准备"><a href="#本地环境准备" class="headerlink" title="本地环境准备"></a>本地环境准备</h2><h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yarn global add hexo-cli（使用npm则为：npm install hexo-cli -g）</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">yarn install（或npm install）</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h1 id="·-PROCESS-·"><a href="#·-PROCESS-·" class="headerlink" title="· PROCESS ·"></a>· PROCESS ·</h1><h2 id="本地环境准备"><a href="#本地环境准备" class="headerlink" title="本地环境准备"></a>本地环境准备</h2><h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yarn global add hexo-cli    <span class="comment"># 使用npm则为：npm install hexo-cli -g</span></span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">yarn install                <span class="comment"># 或npm install</span></span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 <h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><ol>
 <li>网站标题、副标题、描述、作者名、语言、时区 <a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">跟着文档走即可</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br><span class="line">timezone: Asia/Shanghai</span><br></pre></td></tr></table></figure>
 </li>
@@ -618,13 +629,27 @@
 <li>显示文本<br><code>||</code>前的部分<br><img src="/images/zh-CN.yml.png" alt="Menu域"><br>注意：添加显示语言对应的配置文件<code>./themes/next/languages/zh-CN.yml</code>中的显示文本</li>
 <li>菜单图标<br><code>||</code>后的部分，对应<a href="http://fontawesome.io/" target="_blank" rel="noopener">Font Awesome</a>图标的名字。</li>
 </ul>
+<h2 id="更多功能"><a href="#更多功能" class="headerlink" title="更多功能"></a>更多功能</h2><h3 id="访问量统计"><a href="#访问量统计" class="headerlink" title="访问量统计"></a>访问量统计</h3><ol>
+<li>使用<code>不蒜子</code>脚本实现</li>
+<li>访问量初始化</li>
+<li>更多效果</li>
+</ol>
+<h3 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h3><h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><blockquote>
+<p>使用Github<br>分为两个仓库，bparadise.github.io仅为Github Pages发布仓库，另建立仓库blogMaking作为写作仓库。<br>前者使用hexo-git-deployer包进行自动部署，后者使用git手动VC。</p>
+</blockquote>
+<ol>
+<li>Github上建立仓库blogmaking，ssh地址为<a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:mShining/blogMaking.git`</li>
+<li>本地建立git仓库，将已有文件夹加入控制。</li>
+<li>第一次推送到远程仓库。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"first commit for blogMaking"</span></span><br><span class="line">git remote add origin git@github.com:mShining/blogMaking.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <h1 id="·-IN-THE-FUTURE-·"><a href="#·-IN-THE-FUTURE-·" class="headerlink" title="· IN THE FUTURE ·"></a>· IN THE FUTURE ·</h1><p><del>1. 直接复制成MarkDown格式</del></p>
 <ol start="2">
 <li>MD样式优化</li>
 <li>更多主题</li>
 <li>Github Pages仓库分支管理</li>
 </ol>
-<h1 id="·-REFERENCE-·"><a href="#·-REFERENCE-·" class="headerlink" title="· REFERENCE ·"></a>· REFERENCE ·</h1><p><a href="https://blog.csdn.net/u011475210/article/details/79023429" target="_blank" rel="noopener">我的个人博客之旅：从jekyll到hexo</a></p>
+<h1 id="·-REFERENCE-·"><a href="#·-REFERENCE-·" class="headerlink" title="· REFERENCE ·"></a>· REFERENCE ·</h1><p><a href="https://blog.csdn.net/u011475210/article/details/79023429" target="_blank" rel="noopener">我的个人博客之旅：从jekyll到hexo</a><br><a href="https://blog.csdn.net/u013309870/article/details/79881747" target="_blank" rel="noopener">github博客加访问量标签</a><br><a href="https://liam.page/2017/04/29/busuanzi-offset-setting/" target="_blank" rel="noopener">不蒜子计数器初始化的非官方办法</a></p>
 <h1 id="·-Tools-·"><a href="#·-Tools-·" class="headerlink" title="· Tools ·"></a>· Tools ·</h1><ul>
 <li>将标签页快速以MD格式拷贝<br><a href="https://www.jianshu.com/p/386493bece13" target="_blank" rel="noopener">可以快速拷贝成markdown格式的chrome插件 - 简书</a></li>
 <li>网页内容以MD格式拷贝（Chrome插件）<br><a href="https://www.blackglory.me/copycat/" target="_blank" rel="noopener">Chrome扩展程序: 拷贝猫(Copycat) - BlackGlory</a></li>
