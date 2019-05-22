@@ -97,7 +97,7 @@
 
 
   <meta name="description" content="· ENVIRONMENT · 博客类型：静态 框架：Hexo 官方文档 基本命令 部署位置：Github Pages Node.JS包管理器：YARN 官方文档、从npm迁移  · PROCESS ·本地环境准备开始搭建初始化12345yarn global add hexo-cli    # 使用npm则为：npm install hexo-cli -ghexo init blogcd blo">
-<meta name="keywords" content="keyword1, keyword2">
+<meta name="keywords" content="blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="本博客搭建过程">
 <meta property="og:url" content="https://bparadise.github.io/2019/05/18/本博客搭建过程/index.html">
@@ -106,13 +106,15 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://bparadise.github.io/images/menu.png">
 <meta property="og:image" content="https://bparadise.github.io/images/zh-CN.yml.png">
-<meta property="og:updated_time" content="2019-05-19T17:41:08.015Z">
+<meta property="og:updated_time" content="2019-05-22T12:07:08.088Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="本博客搭建过程">
 <meta name="twitter:description" content="· ENVIRONMENT · 博客类型：静态 框架：Hexo 官方文档 基本命令 部署位置：Github Pages Node.JS包管理器：YARN 官方文档、从npm迁移  · PROCESS ·本地环境准备开始搭建初始化12345yarn global add hexo-cli    # 使用npm则为：npm install hexo-cli -ghexo init blogcd blo">
 <meta name="twitter:image" content="https://bparadise.github.io/images/menu.png">
 
 
+
+  <link rel="alternate" href="/atom.xml" title="Blue Paradise" type="application/atom+xml">
 
 
 
@@ -497,11 +499,29 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-20 01:41:08" itemprop="dateModified" datetime="2019-05-20T01:41:08+08:00">2019-05-20</time>
+                <time title="Modified: 2019-05-22 20:07:08" itemprop="dateModified" datetime="2019-05-22T20:07:08+08:00">2019-05-22</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Testing/" itemprop="url" rel="index"><span itemprop="name">Testing</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -636,25 +656,32 @@
 </blockquote>
 <p>切换主题：<br>将站点配置文件<code>./_config.yml</code>中的theme字段的值改为<code>next</code>。</p>
 <h3 id="主题内玩耍"><a href="#主题内玩耍" class="headerlink" title="主题内玩耍"></a>主题内玩耍</h3><ol>
-<li><p>样式（scheme）选择<br>更改主题配置文件<code>./themes/next/_config.yml</code>内的<code>scheme</code>字段。</p>
+<li><p>样式（scheme）选择<br> 更改主题配置文件<code>./themes/next/_config.yml</code>内的<code>scheme</code>字段。</p>
 </li>
-<li><p>头像（avatar）更换</p>
+<li><p>头像（avatar）更换<br> 更改主题配置文件<code>./themes/next/_config.yml</code>内的<code>avatar.url</code>字段，如<code>/images/ibigeyecat.gif</code>（事先在<code>./sources/images/</code>下放置图片。</p>
 </li>
-</ol>
-<p>更改主题配置文件<code>./themes/next/_config.yml</code>内的<code>avatar.url</code>字段，如<code>/images/ibigeyecat.gif</code>（事先在<code>./sources/images/</code>下放置图片。</p>
-<ol start="3">
-<li><p>语言和时区设置<br>更改站点配置文件<code>./_config.yml</code>内的相应字段。</p>
+<li><p>语言和时区设置<br> 更改站点配置文件<code>./_config.yml</code>内的相应字段。</p>
 </li>
 <li><p>菜单设置<br><img src="/images/menu.png" alt="Menu域"></p>
-</li>
-</ol>
 <ul>
 <li>菜单内容<br>更改主题配置文件<code>./themes/next/_config.yml</code>内的<code>menu</code>域，添加、修改或删除</li>
 <li>显示文本<br><code>||</code>前的部分<br><img src="/images/zh-CN.yml.png" alt="Menu域"><br>注意：添加显示语言对应的配置文件<code>./themes/next/languages/zh-CN.yml</code>中的显示文本</li>
-<li>菜单图标<br><code>||</code>后的部分，对应<a href="http://fontawesome.io/" target="_blank" rel="noopener">Font Awesome</a>图标的名字。</li>
+<li><p>菜单图标<br><code>||</code>后的部分，对应<a href="http://fontawesome.io/" target="_blank" rel="noopener">Font Awesome</a>图标的名字。</p>
+</li>
+<li><p>更多菜单选项</p>
+<ul>
+<li>404页面 <a href="https://www.qq.com/404/" target="_blank" rel="noopener">腾讯公益404</a> 或 <a href="http://theme-next.iissnan.com/theme-settings.html#volunteer-404" target="_blank" rel="noopener">主题配置 - NexT 使用文档</a></li>
 </ul>
-<ol start="5">
-<li>首页部分显示文章+阅读全文<br><a href="http://theme-next.iissnan.com/faqs.html" target="_blank" rel="noopener">常见问题 - NexT 使用文档</a></li>
+</li>
+<li><p>安装插件（#故障）<br>添加sitemap和feed插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap$ npm install hexo-generator-feed</span><br></pre></td></tr></table></figure>
+<p>修改_config.yml，增加以下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># ExtensionsPlugins:- hexo-generator-feed- hexo-generator-sitemap #Feed Atomfeed:  type: atom  path: atom.xml  limit: 20 #sitemapsitemap:  path: sitemap.xml</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>首页部分显示文章+阅读全文<br> <a href="http://theme-next.iissnan.com/faqs.html" target="_blank" rel="noopener">常见问题 - NexT 使用文档</a></p>
+</li>
 </ol>
 <h2 id="更多功能"><a href="#更多功能" class="headerlink" title="更多功能"></a>更多功能</h2><h3 id="第三方服务（Statistics-amp-Analytics）"><a href="#第三方服务（Statistics-amp-Analytics）" class="headerlink" title="第三方服务（Statistics&amp;Analytics）"></a>第三方服务（Statistics&amp;Analytics）</h3><h4 id="Baidu-Analytics"><a href="#Baidu-Analytics" class="headerlink" title="Baidu Analytics"></a>Baidu Analytics</h4><ol>
 <li>注册Baidu Analytics，获取tracking id；</li>
@@ -686,10 +713,27 @@
 <h1 id="·-IN-THE-FUTURE-·"><a href="#·-IN-THE-FUTURE-·" class="headerlink" title="· IN THE FUTURE ·"></a>· IN THE FUTURE ·</h1><p><del>1. 直接复制成MarkDown格式</del></p>
 <ol start="2">
 <li>MD样式优化</li>
-<li>更多主题</li>
-<li>Github Pages仓库分支管理</li>
+<li>更多主题及配置<ul>
+<li><a href="http://mashirosorata.vicp.io/HEXO-NEXT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE.html" target="_blank" rel="noopener">HEXO+NEXT主题个性化配置 | SORA</a></li>
+</ul>
+</li>
+<li>Github Pages仓库分支管理<ul>
+<li><a href="https://formulahendry.github.io/2016/12/04/hexo-ci/" target="_blank" rel="noopener">Hexo的版本控制与持续集成 | formulahendry</a></li>
+</ul>
+</li>
 <li>Netlify部署</li>
+<li>邮件提醒<ul>
 <li><a href="https://github.com/xCss/Valine/wiki/Valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%82%AE%E4%BB%B6%E6%8F%90%E9%86%92%E8%AE%BE%E7%BD%AE" target="_blank" rel="noopener">Valine 评论系统中的邮件提醒设置 · xCss/Valine Wiki</a></li>
+<li><a href="http://www.zhaojun.im/hexo-valine-admin/" target="_blank" rel="noopener">Hexo 优化 — Valine 扩展之邮件通知 | 赵俊的博客</a></li>
+</ul>
+</li>
+<li>Discus评论系统</li>
+<li>图床<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/35270383" target="_blank" rel="noopener">盘点一下免费好用的图床 - 知乎</a></li>
+<li><a href="https://www.xiebruce.top/17.html" target="_blank" rel="noopener">PicUploader: 一个还不错的图床工具 | Bruce’s Blog</a></li>
+<li><a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">Molunerfinn/PicGo: A simple &amp; beautiful tool for pictures uploading built by electron-vue</a></li>
+</ul>
+</li>
 </ol>
 <h1 id="·-REFERENCE-·"><a href="#·-REFERENCE-·" class="headerlink" title="· REFERENCE ·"></a>· REFERENCE ·</h1><p><a href="https://blog.csdn.net/u011475210/article/details/79023429" target="_blank" rel="noopener">我的个人博客之旅：从jekyll到hexo</a><br><a href="https://blog.csdn.net/u013309870/article/details/79881747" target="_blank" rel="noopener">github博客加访问量标签</a><br><a href="https://liam.page/2017/04/29/busuanzi-offset-setting/" target="_blank" rel="noopener">不蒜子计数器初始化的非官方办法</a><br><a href="https://letianfeng.github.io/github/2018/05/27/github_pages_and_google_analytics.html" target="_blank" rel="noopener">使用Google Analytics监控GitHub Pages访问流量 | Letian’s blog</a></p>
 <h1 id="·-Tools-·"><a href="#·-Tools-·" class="headerlink" title="· Tools ·"></a>· Tools ·</h1><ul>
@@ -716,6 +760,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/blog/" rel="tag"># blog</a>
+          
+        </div>
       
 
       
@@ -816,6 +866,25 @@
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
 
               
                 
@@ -823,29 +892,42 @@
                 <div class="site-state-item site-state-tags">
                   
                     
+                      <a href="/tags/">
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">7</span>
-                    <span class="site-state-item-name">tags</span>
                   
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
                 </div>
               
             </nav>
           
 
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           
@@ -934,7 +1016,7 @@
 
 
 
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
